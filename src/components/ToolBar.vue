@@ -33,6 +33,7 @@ function updateModel(val: string) {
 <style scoped lang="scss">
 .toolbar {
   z-index: 1000;
+  position: sticky;
   top: 0;
 }
 </style>
