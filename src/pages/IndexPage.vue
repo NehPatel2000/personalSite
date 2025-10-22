@@ -31,6 +31,13 @@ const model = ref('home');
           ello
         </div>
         <ToolBar :options="options" v-model="model" />
+        <q-page-scroller
+          position="bottom-right"
+          :scroll-offset="150"
+          :offset="[18, 18]"
+        >
+          <q-btn fab icon="keyboard_arrow_up" color="accent" />
+        </q-page-scroller>
       </q-page>
     </q-page-container>
   </q-layout>
