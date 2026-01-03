@@ -1,6 +1,5 @@
 <script setup lang="ts">
-// import nehpateImg from 'src/assets/nehpatel.png';
-
+// import nehpateImg from 'src/assets/nehpatel1.png';
 function openResume() {
   window.open(
     'https://docs.google.com/document/d/11uoJRiyZ6O6QaLgwPSFOKo0c7SXT8UC1d1g6RbOpjik/edit?usp=sharing',
@@ -17,17 +16,32 @@ function openResume() {
       alt="Neh Patel"
     /> -->
     <div class="intro-text col">
-      <div class="text-h1 title">Neh Patel</div>
-      <div class="text-h6 q-mb-md q-pb-xl">
+      <div class="text-h1 text-secondary title">Neh Patel</div>
+      <div class="text-h6 text-secondary q-mb-md q-pb-xl">
         Hello! I am a Software Engineer based out of Tennessee. I specialize in
         building full-stack web applications with a focus on user experience and
         performance. I am currently focused on developing machine learning
         applications in my free time and continuing to learn new dev-ops
         technologies.
       </div>
-      <q-btn color="secondary" rounded @click="openResume">
-        <q-icon left size="3em" name="mdi-file-account-outline" />
-        <div>Resume</div>
+      <q-btn class="bg-accent" rounded @click="openResume">
+        <q-icon
+          class="text-primary"
+          left
+          size="3em"
+          name="mdi-file-account-outline"
+        />
+        <div class="text-primary">Resume</div>
+      </q-btn>
+      <q-btn
+        class="q-ml-md bg-accent"
+        rounded
+        href="https://www.linkedin.com/in/nehpatel2000"
+        target="_blank"
+        rel="noopener"
+      >
+        <q-icon left size="3em" name="mdi-linkedin" />
+        <div text-primary>LinkedIn</div>
       </q-btn>
     </div>
   </div>

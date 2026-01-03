@@ -1,13 +1,27 @@
 <script setup lang="ts">
+import { useQuasar } from 'quasar';
 import { getSkills } from 'src/data/Skills';
+import { computed } from 'vue';
 const skills: { name: string; iconClass: string }[] = getSkills();
-const columns = 7; // Adjust for your preferred number of columns
+const $q = useQuasar();
+const columns = computed(() => {
+  if ($q.screen.xs) return 1;
+  if ($q.screen.sm) return 3;
+  if ($q.screen.md) return 5;
+  if ($q.screen.lg) return 7;
+  return 7; // xl
+});
 </script>
 <template>
-  <div class="relative-position">
-    <div class="absolute-center text-h2 vertical-middle text-white">Skills</div>
+  <div class="bg-primary">
+    <div class="row justify-center items-center q-py-lg">
+      <div class="col-auto text-h2 text-secondary text-center">Skills</div>
+    </div>
   </div>
-  <div class="skills-hex-grid q-pa-xl">
+  <div
+    class="skills-hex-grid bg-primary q-pa-xl"
+    :style="{ gridTemplateColumns: `repeat(${columns}, 90px)` }"
+  >
     <div
       v-for="(skill, i) in skills"
       :key="skill.name"
@@ -23,7 +37,6 @@ const columns = 7; // Adjust for your preferred number of columns
 <style scoped lang="scss">
 .skills-hex-grid {
   display: grid;
-  grid-template-columns: repeat(7, 90px); /* tighter columns */
   grid-auto-rows: 80px;
   justify-content: center;
   position: relative;

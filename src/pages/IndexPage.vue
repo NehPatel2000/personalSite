@@ -24,9 +24,11 @@ const model = ref('home');
   >
     <q-page-container>
       <q-page>
-        <div class="bg-secondary q-col q-mt-xl">
+        <div class="bg-primary q-col q-mt-xl">
           <introduction-section />
           <experience-card-section class="q-pa-md" />
+        </div>
+        <div class="bg-secondary q-col q-mt-xl">
           <skills-section class="q-pa-md" />
           ello
         </div>

@@ -12,16 +12,20 @@
 // to match your app's branding.
 // Tip: Use the "Theme Builder" on Quasar's documentation website.
 
-// $primary: #bcd8ec;
-// $secondary: #ffdab4;
-// $accent: #d6e5bd;
-$primary: white;
-$secondary: black;
+$primary: #000000;
+$secondary: #ffffff;
 $accent: #ffdab4;
 $dark: #1d1d1d;
 $dark-page: #121212;
+$light: #be3939c7;
 
 $positive: #21ba45;
 $negative: #c10015;
 $info: #31ccec;
 $warning: #f2c037;
+
+/* Color utilities using your SCSS variables */
+.hover-bg-accent:hover {
+  background: $info;
+  color: $negative;
+}
